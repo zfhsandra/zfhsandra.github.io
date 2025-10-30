@@ -1,60 +1,200 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="soil mapping, spatial prediction"/>
-    <title>SoLIM</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fanghe Zhao | Academic Homepage</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1f2937;
+      --border: #e5e7eb;
+      --primary: #3b82f6;
+      --card: #f8fafc;
+    }
+    body { margin:0; font-family: ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background: var(--bg); color: var(--text); scroll-behavior: smooth; display:flex; }
 
-    <!--put your Bootstrap stylesheet links below this comment and above style.css-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    /* Sidebar Navigation */
+    aside { position:sticky; top:0; align-self:flex-start; width:220px; height:100vh; border-right:1px solid var(--border); background:color-mix(in srgb, var(--bg) 95%, transparent); backdrop-filter:saturate(180%) blur(6px); padding:20px 10px; box-sizing:border-box; }
+    .nav-links { display:flex; flex-direction:column; gap:10px; }
+    .nav-links a { text-decoration:none; color:var(--text); font-weight:500; padding:6px 10px; border-radius:6px; }
+    .nav-links a:hover, .nav-links a.active { background:var(--primary); color:#fff; }
+
+
+    main { flex:1; overflow-y:auto; height:100vh; }
+
+
+    .lang-toggle { display:flex; gap:8px; margin-top:20px; }
+    .lang-btn { padding:6px 10px; border:1px solid var(--border); border-radius:6px; cursor:pointer; background:var(--card); }
+    .lang-btn[aria-pressed="true"] { background: var(--primary); color:#fff; }
+    .lang-en { display:inline; }
+    .lang-zh { display:none; }
+    html[data-lang="zh"] .lang-en { display:none; }
+    html[data-lang="zh"] .lang-zh { display:inline; }
+
+
+    .container{max-width:900px;margin:0 auto;padding:0 20px}
+    section{padding-block:clamp(14px,2.5vw,28px); border-bottom:1px solid var(--border); scroll-margin-top:20px}
+    section > h2{margin:0 0 10px}
+    section p{margin:6px 0 10px}
+    section ul{margin:6px 0 8px; padding-left:18px}
+    section li{margin:4px 0}
+    .container section:last-child{border-bottom:0}
+
+
+    .hero{position:relative;margin:16px 0 24px;border-radius:16px;overflow:hidden;background:linear-gradient(135deg, rgba(59,130,246,.08), rgba(236,72,153,.08));border:1px solid var(--border)}
+    .hero-inner{display:grid;grid-template-columns:160px 1fr;gap:20px;align-items:center;padding:22px}
+    .avatar{width:160px;height:160px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 10px 24px rgba(0,0,0,.08)}
+    @media (max-width:720px){body{flex-direction:column;}aside{width:100%;height:auto;border-right:none;border-bottom:1px solid var(--border);}main{height:auto}}
+  </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-default">
-        <!-- Container inside the navbar header to span the page -->
-        <div class="container"> 
-            <!-- Creates the navbar header -->
-            <div class="navbar"> 
-                <!-- This complex script is just for a hamburger button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-header" aria-expanded="false" aria-controls="navbar-header">
-                    <span class="sr-only">Toggle navigation</span>
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-list" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" /></svg>
-                    <span class="menu"> Menu</span>
-                </button> 
-                <!-- Offset homepage nav persistent on smallscreens -->
-                <a class="navbar-brand" href="index.html">The SoLIM Project</a>
-            </div>
-            <!-- Links expanded on larger screens  -->
-            <div id="navbar-header" class="collapse navbar-collapse">
-                <!-- Links to include in navbar -->
-                <ul class="nav navbar-nav">
-                    <!-- Unordered list for links on navbar -->
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="software.html">Software</a></li>
-                    <li><a href="publications.html">Publications</a></li>
-                </ul>
-            </div> <!-- end .navbar-collapse -->
-        </div> <!-- end .container -->
+  <aside>
+    <div><strong><span class="lang-en">Fanghe Zhao</span><span class="lang-zh">赵芳鹤</span></strong></div>
+    <nav class="nav-links">
+    <a href="#about"><span class="lang-en">About</span><span class="lang-zh">关于</span></a>
+    <a href="#work"><span class="lang-en">Research Experience</span><span class="lang-zh">研究经历</span></a>
+    <a href="#education"><span class="lang-en">Education background</span><span class="lang-zh">教育背景</span></a>
+    <a href="#publications"><span class="lang-en">Publications</span><span class="lang-zh">论文</span></a>
+    <a href="#projects"><span class="lang-en">Fundings</span><span class="lang-zh">主持项目</span></a>
+    <a href="#contact"><span class="lang-en">Contact</span><span class="lang-zh">联系</span></a>
     </nav>
-    <div class="content">
-
-        <div id="index-image" text-align="center">
-            <img src="images/solim_about.jpg" width="500px">
-        </div>
-        <div>
-            <p>The members of SoLIM Group come from:
-                <br><a href="http://english.igsnrr.cas.cn/">Institute of Geographic Sciences and Natural Resources Research, 
-                    Chinese Academy of Sciences</a>
-                <br><a href="http://schools.njnu.edu.cn/geog/">School of Geography, Nanjing Normal University</a>
-                <br><a href="https://geography.wisc.edu/">Department of Geography, University of Wisconsin-Madison</a>
-                <br>The members include: <a href="https://geography.wisc.edu/profile.php?p=34">A-Xing ZHU</a> , 
-                <a href="http://people.ucas.ac.cn/~qincz?language=en">Cheng-Zhi QIN</a> , 
-                Liang-Jun ZHU , Peng LIANG , Nai-Qing FAN , Zhi-Wei HOU , Yi-Jie WANG , Fang-He ZHAO , Shen SHEN , 
-                Rui-Xing YANG , Yu-Jing WANG , Tong WU ...</p>
-        </div>
+    <div class="lang-toggle">
+    <button class="lang-btn" id="btn-en" aria-pressed="true">EN</button>
+    <button class="lang-btn" id="btn-zh" aria-pressed="false">中文</button>
     </div>
+  </aside>
+  <main>
+    <div class="container">
+      <section class="hero" id="top">
+        <div class="hero-inner">
+          <img class="avatar" src="assets/portrait.jpg" alt="Portrait of Fanghe Zhao / 赵芳鹤学术头像" />
+          <div>
+            <h1><span class="lang-en">Fanghe Zhao</span><span class="lang-zh">赵芳鹤</span></h1>
+            <p class="tagline">
+              <span class="lang-en">Postdoctoral Researcher, IGSNRR (CAS) · Intelligent Geo‑computation · Spatial Analysis · Digital Soil Mapping</span>
+              <span class="lang-zh">中国科学院地理科学与资源研究所 · 博士后 · 智能地理计算 · 空间分析 · 数字土壤制图</span>
+            </p>
+            <div class="actions">
+              <a class="btn" href="#contact">
+                <span class="lang-en">Contact</span><span class="lang-zh">联系我</span>
+              </a>
+            </div>
+            <div>
+              <span class="pill">GeoAI</span>
+              <span class="pill"><span class="lang-en">Spatial Structure</span><span class="lang-zh">空间结构</span></span>
+              <span class="pill">DSM</span>
+              <span class="pill">Variogram</span>
+              <span class="pill">KnowSim</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="container">
+      <section id="about">
+        <h2><span class="lang-en">About</span><span class="lang-zh">关于</span></h2>
+        <p class="lang-en">My research focuses on <strong>intelligent spatial analysis and modeling under resource constraints</strong>:
+             (1) sample design under budget limits, (2) spatial modeling when data are scarce, and (3) efficient implementations under constrained computing resources. 
+        <br> The proposed methods are applied in the field of <em>digital soil mapping</em>, <em>groundwater level change prediction</em>, and <em>vegetation type inference</em>.</p>
+        <p class="lang-zh">本人研究围绕<strong>资源受限情景下的智能空间分析与建模</strong>展开，包括（1）预算受限下的高效布样，
+            （2）数据稀缺条件下的空间建模，（3）算力约束下的高效实现。应用方向涵盖<em>数字土壤制图</em>、<em>地下水埋深变化预测</em>与<em>植被类型推测</em>。</p>
+      </section>
+
+      <section id="work">
+        <h2><span class="lang-en">Reserach Experience</span><span class="lang-zh">工作经历</span></h2>
+        <ul>
+          <li><span class="lang-en">Postdoctoral Researcher, Institute of Geogarphic Science and Natural Resources Research, CAS</span><span class="lang-zh">博士后，中国科学院地理科学与资源研究所</span></li>
+        </ul>
+      </section>
+
+      <section id="education">
+        <h2><span class="lang-en">Education</span><span class="lang-zh">教育背景</span></h2>
+        <ul>
+          <li><span class="lang-en">PhD, University of Chinese Academy of Sciences</span><span class="lang-zh">博士，中国科学院大学</span></li>
+          <li><span class="lang-en">Joint PhD program, University of Wisconsin-Madison</span><span class="lang-zh">联合培养博士，美国威斯康辛大学麦迪逊分校</span></li>
+          <li><span class="lang-en">B.S., Nanjing University</span><span class="lang-zh">学士，南京大学，地理与海洋科学学院</span></li>
+        </ul>
+      </section>
+
+      <!--section id="research">
+        <h2><span class="lang-en">Research Highlights</span><span class="lang-zh">研究亮点</span></h2>
+        <ul>
+          <li><span class="lang-en">Geographic Similarity Variogram</span><span class="lang-zh">地理相似性变异函数</span></li>
+          <li><span class="lang-en">MuSS: Multivariate Spatial Structure Index</span><span class="lang-zh">MuSS：多变量空间结构指数</span></li>
+          <li><span class="lang-en">KnowSim: Knowledge‑Driven Similarity Mapping</span><span class="lang-zh">KnowSim：知识驱动的相似性制图</span></li>
+        </ul>
+      </section-->
+
+      <section id="publications">
+        <h2><span class="lang-en">Publications</span><span class="lang-zh">论文</span></h2>
+        <ol>
+            <li><b>Zhao, F.-H.,</b> Qin, C.-Z., Zhu, A-X., Pei, T. (2025). A multivariate spatial structure indicator based on geographic similarity. 
+                <i>International Journal of Geographic Information Science, 39</i>(7), ,1518-1539 <b><span class="lang-en">(Top Journal in GIS field)</span><span class="lang-zh">一区top</span> </b></li>
+            <li><b>Zhao, F.-H.,</b> Huang, J.*, & Zhu, A-X. (2023). Spatial prediction of groundwater level change based on the Third Law of Geography. 
+                <i>International Journal of Geographic Information Science, 37</i>(10), 2129-2149. <b><span class="lang-en">(Top Journal in GIS field)</span><span class="lang-zh">一区top</span> </b></li>
+           <li><b>Zhao, F.-H.,</b> Zhu, A-X., Qin, C.-Z.* (2024). Spatial distribution pattern analysis using variograms over geographic and feature space. 
+                <i>Geo-spatial Information Science 30</i>(2), 199-214. <b><span class="lang-en">(CAS Zone 1)</span><span class="lang-zh">一区</span></b> </li>
+            <li><b>Zhao, F.-H.,</b> An, Y.-M., Qin, C.-Z., Zhu, A-X., Yang, L., Qi, F. (2025) Digital soil mapping based on the similarity of geographic 
+                environment over spatial neighborhoods. <i>International Journal of Digital Earth, 18</i>(1), 2471507 <b><span class="lang-en">(CAS Zone 1)</span><span class="lang-zh">一区</span> </b></li>
+            <li><b>Zhao, F.-H.,</b> Zhu, A. X.*, Zhu, L. J., & Qin, C. Z. (2024). iSoLIM: a similarity-based spatial prediction software for the big data era.
+                <i> Annals of GIS</i> 30(4):535-549 </li>
+            <li><b>Zhao, F.-H.,</b>  Qin, C.-Z.*, Wei, T.-F., Ma, T.-W., Liu, J.-Z., Qi, F., Zhu, A-X. Dynamical Recommendation of Substitute Locations
+                 for Inaccessible Soil Samples during Field Sampling Campaign. <i>ISPRS International Journal of Geo-Information, 2019, 8</i>(3), 127 </li>
+            <li>Zhu, A-X.,<b>Zhao, F.-H.,<span class="lang-en">(Corresponding)</span><span class="lang-zh">(通讯)</span></b>  Pan, H. B., & Liu, J. Z. (2021). Mapping Rice Paddy Distribution Using Remote Sensing by Coupling Deep Learning with Phenological Characteristics.
+                <i>  Remote Sensing, 13</i>(7):1360 </li>
+            <li>Zhu, A-X.,<b>Zhao, F.-H.,<span class="lang-en">(Corresponding)</span><span class="lang-zh">(通讯)</span></b> Liang, P., & Qin, C. Z. (2020). Next generation of GIS: must be easy. 
+               <i> Annals of GIS, 27</i>(1), 71-86  <b><span class="lang-en">(Best paper award, Most downloaded Award)</span><span class="lang-zh">(最佳论文奖，最高下载量论文奖)</span></b> </li>
+            <li>Fan, N.-Q., <b>Zhao, F.-H.,</b> Zhu, L. J., Qin, C. Z.*, & Zhu, A-X. (2022). Digital soil mapping with adaptive consideration of the
+                 applicability of environmental covariates over large areas. <i>International Journal of Applied Earth Observation and Geoinformation, 113</i>, 102986.</li>
+            <li>Fan, X., Fan, N., Qin, C.-Z., <b>Zhao, F.-H.,</b> Zhu, L.-J., & Zhu, A. X. (2023). Large-area soil mapping based on environmental similarity with 
+                adaptive consideration of spatial distance to samples. <i>Geoderma, 439</i>, 116683.</li>
+            <li>秦承志, 朱良君, 陈子越, 王祎杰, 王玉靖, 武成龙, 樊星辰, <b>赵芳鹤</b>, 任应超, 朱阿兴, 周成虎. 2025. “数据-知识-模型”协同递归的智能化地理建模. 地球信息科学学报, 27(5): 1027-1040.</li>
+
+        </ol>
+      </section>
+
+      <section id="projects">
+        <h2><span class="lang-en">Fundings</span><span class="lang-zh">主持项目</span></h2>
+        <ul class="lang-en">
+        <li><b>National Natural Science Foundation of China (NSFC)</b> Young Scientists Fund (C class).
+            Variogram based on geographic environmental similarity: design and application. 300,000 yuan,  <b> host.</b></li>
+        <li>2025 Postdoctoral Fellowship Program of China Postdoctoral Science Foundation (CPSF), Tier C. Second-order change in space based on geographical environment similarity: Method and application. 240,000 yuan,<b> host.</b></li>
+        </ul>
+        <ul class="lang-zh">
+        <li><b>2025年度国家资助博士后研究人员计划C档资助</b>基于地理环境相似性的空间二阶变化分析方法及应用，24万元，  <b> 主持</b>。</li>
+        <li><b>国家自然科学基金青年科学基金项目 (C类)</b>基于地理环境相似性的变异函数：设计及应用评价，2026.1-2028.12，30万元， <b> 主持</b>。</li>
+        </ul>
+      </section>
+
+
+      <section id="contact">
+        <h2><span class="lang-en">Contact</span><span class="lang-zh">联系方式</span></h2>
+        <p>Email: <a href="mailto:zhaofh@lreis.ac.cn">zhaofh@lreis.ac.cn</a></p>
+        <p>Research Gate: <a href="https://www.researchgate.net/profile/Fang-He-Zhao">https://www.researchgate.net/profile/Fang-He-Zhao</a></p> <pr>
+        <p><span class="lang-en">Personal page</span><span class="lang-zh">个人主页</span>: zfhsandra.github.io</p>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const root = document.documentElement;
+    const btnEN = document.getElementById('btn-en');
+    const btnZH = document.getElementById('btn-zh');
+
+    function setLang(lang){
+      root.dataset.lang = lang;
+      localStorage.setItem('lang', lang);
+      btnEN?.setAttribute('aria-pressed', String(lang==='en'));
+      btnZH?.setAttribute('aria-pressed', String(lang==='zh'));
+      document.title = (lang==='zh') ? '赵芳鹤 | 学术主页' : 'Fanghe Zhao | Academic Homepage';
+    }
+
+    btnEN?.addEventListener('click', ()=>setLang('en'));
+    btnZH?.addEventListener('click', ()=>setLang('zh'));
+
+    setLang(localStorage.getItem('lang') || ((navigator.language||'en').startsWith('zh')?'zh':'en'));
+  </script>
 </body>
 </html>
